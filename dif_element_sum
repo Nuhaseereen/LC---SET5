@@ -1,0 +1,16 @@
+int differenceOfSum(int* nums, int numsSize) {
+    int i=0,s=0,r=0,e=0;
+    for(i=0;i<numsSize;i++){
+        s+=nums[i];
+    }
+    int d=0;
+    for(i=0;i<numsSize;i++){
+        int t=nums[i];
+        while(t!=0){
+r=t%10;
+d+=r;
+t=t/10;
+        }
+    }
+    return s-d;
+}
