@@ -1,0 +1,16 @@
+int countKeyChanges(char* s) {
+  int i=0;
+  int c=0;
+  int l=0;
+  while(s[l]!='\0'){
+   l++;
+  }
+  for(i=0;i<l-1;i++){
+       if(s[i]!=s[i+1]){
+        if(s[i]!=s[i+1]+32 && s[i]!=s[i+1]-32){
+            c++;
+        }
+       }
+  }
+        return c;
+}
