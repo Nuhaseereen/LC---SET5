@@ -1,0 +1,14 @@
+char* triangleType(int* nums, int numsSize) {
+   int i=0;
+   int a=nums[0],b=nums[1],c=nums[2];
+   if(a==b&&b==c){
+    return "equilateral";
+   }
+   else if((a==b && a+b>c)||(b==c&&b+c>a)||(c+a>b && c==a)){
+    return "isosceles";
+   }
+   else if((a+b>c)&&(b+c>a)&&(a+c>b)){
+    return "scalene";
+   }
+return "none";
+}
